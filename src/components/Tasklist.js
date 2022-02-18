@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { List } from "antd";
 import Task from "./Task";
 
-const faketasks = [
+const fakeTasks = [
   { id: 1, task: "Buy Milk", done: false },
   { id: 2, task: "Eat Chips", done: false },
   { id: 3, task: "Eat Cereal", done: false },
@@ -10,11 +10,11 @@ const faketasks = [
   { id: 5, task: "Buy Cheese", done: false },
 ];
 export default function TaskList() {
-  const [tasks, setTasks] = useState();
+  const [tasks, setTasks] = useState(fakeTasks);
   return (
     <List
       bordered
-      dataSource={tasks}
+      dataSource={fakeTasks}
       renderItem={(item) => <Task item={item} />}
     />
   );
