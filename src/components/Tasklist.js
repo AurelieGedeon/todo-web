@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { List } from "antd";
+import { List, Checkbox } from "antd";
 import Task from "./Task";
 
 // const fakeTasks = [
@@ -27,7 +27,12 @@ export default function TaskList({ tasks, setTasks }) {
       bordered
       size="large"
       dataSource={tasks}
-      renderItem={(item) => <Task item={item} setTasks={setTasks} />} //render item is like .map
+      renderItem={(item) => (
+        <>
+          {/* <Checkbox></Checkbox> */}
+          <Task item={item} setTasks={setTasks} />
+        </>
+      )} //render item is like .map
     />
   );
 }

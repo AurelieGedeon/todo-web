@@ -1,4 +1,4 @@
-import { List } from "antd";
+import { List, Checkbox } from "antd";
 import { useEffect, useState } from "react";
 
 export default function Task({ item, setTasks }) {
@@ -31,8 +31,15 @@ export default function Task({ item, setTasks }) {
     //THEN: setTasks(data)
   };
   return (
-    <List.Item onClick={handleToggleTaskDone} style={itemStyle}>
-      {item.task}
-    </List.Item>
+    <>
+      <List.Item style={itemStyle}>
+        <Checkbox
+          style={{ margin: "10px" }}
+          onClick={handleToggleTaskDone}
+          checked={item.done}
+        ></Checkbox>
+        {item.task}
+      </List.Item>
+    </>
   );
 }
