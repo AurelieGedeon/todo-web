@@ -9,8 +9,7 @@ import Task from "./Task";
 //   { id: 4, task: "Go Ham", done: true },
 //   { id: 5, task: "Buy Cheese", done: false },
 // ];
-export default function TaskList() {
-  const [tasks, setTasks] = useState("");
+export default function TaskList({ tasks, setTasks }) {
   useEffect(() => {
     //useEffect is allowing us to have real time data and
     //get data from API
@@ -26,8 +25,9 @@ export default function TaskList() {
   return (
     <List
       bordered
+      size="large"
       dataSource={tasks}
-      renderItem={(item) => <Task item={item} />}
+      renderItem={(item) => <Task item={item} />} //render item is like .map
     />
   );
 }
