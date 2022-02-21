@@ -27,7 +27,7 @@ export default function TaskList({ tasks, setTasks }) {
       bordered
       size="large"
       dataSource={tasks}
-      renderItem={(item) => <Task item={item} />} //render item is like .map
+      renderItem={(item) => <Task item={item} setTasks={setTasks} />} //render item is like .map
     />
   );
 }

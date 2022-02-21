@@ -12,7 +12,7 @@ function App() {
       <Layout.Content style={{ padding: "0 400px", marginTop: 64 }}>
         <Main />
       </Layout.Content>
-      <Layout.Footer>&copy; 2022, Aurelie Gedeon</Layout.Footer>
+      <Layout.Footer>&copy; 2022 Aurelie Gedeon</Layout.Footer>
     </Layout>
   );
 }

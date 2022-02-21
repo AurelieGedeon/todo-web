@@ -9,5 +9,14 @@ export default function Task({ item }) {
       setItemStyle({ color: "black", textDecoration: "none" });
     }
   }, [item]);
-  return <List.Item style={itemStyle}>{item.task}</List.Item>;
+  const handleToggleTaskDone = () => {
+    //call API -- patch: `/tasks/${item.id}` send done: !item.done
+    //THEN: fetch tasks
+    //THEN: setTasks(data)
+  };
+  return (
+    <List.Item onClick={handleToggleTaskDone} style={itemStyle}>
+      {item.task}
+    </List.Item>
+  );
 }
