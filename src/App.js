@@ -1,5 +1,6 @@
-import { Layout, Skeleton } from "antd";
+import { Layout } from "antd";
 import Main from "./components/Main";
+import "./App.css";
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
           position: "fixed",
           zIndex: 10,
           width: "100%",
-          color: "white",
+          color: "black",
           textAlign: "center",
           backgroundColor: "gold",
           fontSize: "40px",
@@ -18,10 +19,14 @@ function App() {
       >
         Much Todo
       </Layout.Header>
-      <Layout.Content style={{ padding: "0 400px", marginTop: 64 }}>
-        <>
-          <Main />
-        </>
+      <Layout.Content
+        // className="background"
+        style={{
+          padding: "0 400px",
+          marginTop: 64,
+        }}
+      >
+        <Main />
       </Layout.Content>
       <Layout.Footer>&copy; 2022 Aurelie Gedeon</Layout.Footer>
     </Layout>

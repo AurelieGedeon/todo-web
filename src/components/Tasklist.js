@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { List, Checkbox } from "antd";
+import { useEffect } from "react";
+import { List } from "antd";
 import Task from "./Task";
 
 export default function TaskList({ tasks, setTasks, loading, setLoading }) {
@@ -25,7 +25,6 @@ export default function TaskList({ tasks, setTasks, loading, setLoading }) {
       dataSource={tasks}
       renderItem={(item) => (
         <>
-          {/* <Checkbox></Checkbox> */}
           <Task
             item={item}
             setTasks={setTasks}

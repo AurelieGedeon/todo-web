@@ -1,7 +1,7 @@
 import { Input } from "antd";
 import { useState } from "react";
 
-export default function NewTask({ setTasks }) {
+export default function NewTask({ setTasks, setLoading }) {
   const [newTask, setNewTask] = useState("");
 
   const handleButtonSubmit = () => {
@@ -11,6 +11,7 @@ export default function NewTask({ setTasks }) {
     const taskObject = {
       task: newTask,
     };
+    setLoading(true);
 
     fetch("https://much-todo-ag.uc.r.appspot.com/tasks", {
       method: "POST",
@@ -23,9 +24,15 @@ export default function NewTask({ setTasks }) {
         setNewTask("");
         fetch("https://much-todo-ag.uc.r.appspot.com/tasks")
           .then((res) => res.json())
-          .then((data) => setTasks(data));
+          .then((data) => {
+            setTasks(data);
+            setLoading(false);
+          });
       })
-      .catch((err) => console.error(err));
+      .catch((err) => {
+        alert(err);
+        setLoading(false);
+      });
   };
 
   const handleInputText = (event) => {
@@ -42,7 +49,6 @@ export default function NewTask({ setTasks }) {
         onSearch={handleButtonSubmit}
         onChange={(event) => handleInputText(event)}
       />
-      {/* <button onClick={handleButtonSubmit}>Add Task</button> */}
     </>
   );
 }
