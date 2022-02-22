@@ -20,7 +20,7 @@ function App() {
         Much Todo
       </Layout.Header>
       <Layout.Content
-        // className="background"
+        className="background"
         style={{
           padding: "0 400px",
           marginTop: 64,

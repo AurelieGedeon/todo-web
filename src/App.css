@@ -39,6 +39,8 @@
 
 .background {
   background-image: url("/src/HufflepuffCommonRoomWallpaper.jpg");
-  max-height: "auto";
-  max-width: "auto";
+  background-size: cover;
+  background-position: center center;
+  height: calc(100vh - 128px);
+  min-height: 420px;
 }
