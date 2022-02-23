@@ -17,7 +17,7 @@ function App() {
           fontWeight: "bold",
         }}
       >
-        Much Todo
+        Much To Do
       </Layout.Header>
       <Layout.Content
         className="background"
