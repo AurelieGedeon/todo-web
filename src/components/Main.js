@@ -6,7 +6,9 @@ export default function Main() {
   const [tasks, setTasks] = useState([]);
   const [loading, setLoading] = useState();
   return (
-    <section style={{ background: "white", padding: "0 40px 40px" }}>
+    <section
+      style={{ background: "white", padding: "40px 40px 40px", opacity: 0.8 }}
+    >
       <TaskList
         tasks={tasks}
         setTasks={setTasks}

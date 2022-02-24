@@ -1,3 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500&display=swap");
+
+.font {
+  font-family: "Josefin Sans", sans-serif;
+}
 .App {
   text-align: center;
 }
@@ -41,6 +46,6 @@
   background-image: url("/src/HufflepuffCommonRoomWallpaper.jpg");
   background-size: cover;
   background-position: center center;
-  height: calc(100vh - 128px);
+  height: calc(200vh - 200px);
   min-height: 420px;
 }

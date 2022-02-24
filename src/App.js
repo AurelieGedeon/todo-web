@@ -22,7 +22,7 @@ function App() {
       <Layout.Content
         className="background"
         style={{
-          padding: "0 400px",
+          padding: "100px 400px",
           marginTop: 64,
         }}
       >
